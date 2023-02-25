@@ -1,3 +1,8 @@
 
 base_web_app/.terraform/providers/registry.terraform.io/hashicorp/aws/4.53.0/darwin_amd64/terraform-provider-aws_v4.53.0_x5
 .DS_Store
+base_web_app/.terraform/providers/registry.terraform.io/hashicorp/aws/4.56.0/darwin_amd64/terraform-provider-aws_v4.56.0_x5
+base_web_app/.terraform/terraform.tfstate
+base_web_app/.terraform.lock.hcl
+base_web_app/.terraform.lock.hcl
+*.hcl

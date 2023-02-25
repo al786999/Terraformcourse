@@ -8,6 +8,23 @@ provider "aws" {
 }
 
 ##################################################################################
+# BACKEND
+##################################################################################
+terraform {
+  backend "s3" {
+    # Replace this with your bucket name!
+    bucket         = "terraform-state-nemoka999"
+    key            = "global/s3/terraform.tfstate"
+    region         = "us-east-1"
+
+    # Replace this with your DynamoDB table name!
+    dynamodb_table = "terraform-up-and-running-locks"
+    encrypt        = true
+  }
+}
+
+
+##################################################################################
 # DATA
 ##################################################################################
 
@@ -48,7 +65,7 @@ resource "aws_subnet" "subnet1" {
 }
 
 resource "aws_subnet" "subnet2" {
-  cidr_block              = var.vpc_subnets_cidr_block[0]
+  cidr_block              = var.vpc_subnets_cidr_block[1]
   vpc_id                  = aws_vpc.vpc.id
   map_public_ip_on_launch = true
   availability_zone       = data.aws_availability_zones.available.names[1]
