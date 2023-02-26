@@ -1,21 +1,12 @@
 ##################################################################################
-# PROVIDERS
-##################################################################################
-
-provider "aws" {
-  profile = var.aws_profile
-  region  = var.aws_region
-}
-
-##################################################################################
 # BACKEND
 ##################################################################################
 terraform {
   backend "s3" {
     # Replace this with your bucket name!
-    bucket         = "terraform-state-nemoka999"
-    key            = "global/s3/terraform.tfstate"
-    region         = "us-east-1"
+    bucket = "terraform-state-nemoka999"
+    key    = "global/s3/terraform.tfstate"
+    region = "us-east-1"
 
     # Replace this with your DynamoDB table name!
     dynamodb_table = "terraform-up-and-running-locks"
@@ -23,14 +14,6 @@ terraform {
   }
 }
 
-
-##################################################################################
-# DATA
-##################################################################################
-
-data "aws_ssm_parameter" "ami" {
-  name = "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
-}
 
 data "aws_availability_zones" "available" {
   state = "available"
