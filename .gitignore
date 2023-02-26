@@ -10,3 +10,4 @@ base_web_app/.terraform/providers/registry.terraform.io/hashicorp/aws/3.76.1/dar
 base_web_app/.terraform.lock.hcl
 base_web_app/.terraform/providers/registry.terraform.io/hashicorp/random/3.4.3/darwin_amd64/terraform-provider-random_v3.4.3_x5
 base_web_app/.terraform.lock.hcl
+base_web_app/.terraform/providers/registry.terraform.io/hashicorp/aws/4.56.0/windows_amd64/terraform-provider-aws_v4.56.0_x5.exe
